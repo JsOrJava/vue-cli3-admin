@@ -1,0 +1,142 @@
+/**
+  web端基础样式
+ */
+@import "variable";
+@import "mixin";
+@import "class";
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+  margin: 0;
+  padding: 0;
+}
+a{text-decoration: none;}
+hr{background-color: #F0F0F0;height:1px;border:0;}
+li{list-style: none;}
+img{border: 0;vertical-align: middle;}
+input{outline: none}
+body {
+  min-height: 100%;
+  font-family: 'PingFang SC', "Helvetica Neue", Helvetica, "microsoft yahei", arial, STHeiTi, sans-serif;
+}
+
+.f-font-size12{font-size: 12px;}
+.f-font-size14{font-size: 14px;}
+
+.f-margin-right5 {margin-right: 5px}
+.f-margin-left5 {margin-left: 5px}
+.f-margin-top5 {margin-top: 5px}
+.f-margin-bottom5 {margin-bottom: 5px}
+
+.f-margin-right10 {margin-right: 10px}
+.f-margin-left10 {margin-left: 10px}
+.f-margin-top10 {margin-top: 10px}
+.f-margin-bottom10 {margin-bottom: 10px}
+
+.f-margin-bottom15 {margin-bottom: 15px}
+
+.f-margin-right20 {margin-right: 20px}
+.f-margin-left20 {margin-left: 20px}
+.f-margin-top20 {margin-top: 20px}
+.f-margin-bottom20 {margin-bottom: 20px}
+
+.f-margin-bottom30 {margin-bottom: 30px}
+
+.f-inline-block {
+  display: inline-block;
+}
+.f-cursor-pointer {
+  cursor: pointer;
+}
+
+/* 文字居中 */
+.f-tx-center {
+  text-align: center;
+}
+
+/* 文字垂直 */
+.f-va-tx-bottom {
+  vertical-align: text-bottom;
+}
+.f-va-tx-middle {
+  vertical-align: middle;
+}
+
+/* 文字超出部分... */
+.ellipsis__word {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* flex布局 */
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  .flex-item {
+    flex: auto;
+  }
+}
+.flex-container-rounder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .flex-item {
+    flex: 1;
+  }
+}
+.flex-container-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  .flex-item {
+    flex: 1;
+  }
+}
+
+/*上下居中布局*/
+.vam {
+  vertical-align: middle;
+  line-height: 0;
+  text-align: center;
+  &::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0;
+  }
+  > *{
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+  }
+}
+
+
+
+/* 解决浮动 */
+.clear {
+  &::after {
+    display: block;
+    content: '';
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+  }
+}
+.f-fl {
+  float: left;
+}
+
+.f-fr {
+  float: right;
+}

@@ -1,0 +1,16 @@
+/**
+  scss函数 (@include)
+ */
+
+/*字体类型
+---------------------------------------------------------------- */
+@mixin fontStyle($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+@mixin backGround($url) {
+  background: url($url) center center / cover no-repeat;
+  background-size: 100% 100%;
+}
+
